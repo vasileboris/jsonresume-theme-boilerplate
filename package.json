@@ -1,14 +1,13 @@
 {
-  "name": "jsonresume-theme-boilerplate",
-  "version": "0.1.2",
-  "description": "Boilerplate theme for JSON Resume",
-  "author": "Mattias Erming",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/erming/jsonresume-theme-boilerplate"
-  },
+  "name": "jsonresume-theme-print-flexbox",
+  "version": "1.0.0",
+  "description": "It is a theme used to render a jsonresume as html for print",
+  "main": "index.js",
+  "repository": "https://github.com/vasileboris/jsonresume-theme-print-flexbox",
+  "author": "Vasile Boris",
   "license": "MIT",
+  "homepage": "https://espressoprogrammer.com/libraries/jsonresume-theme-print-flexbox",
   "dependencies": {
-    "handlebars": "^2.0.0-alpha.4"
+    "handlebars": "^4.0.12"
   }
 }
