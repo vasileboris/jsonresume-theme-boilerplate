@@ -1,21 +1,20 @@
 <!doctype html>
 <html>
-	<head>
-	
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 	
-	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+	<title>{{resume.basics.name}}</title>
 
-	<style>
+    <style>
+    {{{normalizeCss}}}
 	{{{css}}}
 	</style>
-	
-	</head>
-	<body>
-	
-	<div id="resume">
+</head>
+<body>
+	<article class="resume">
 		{{> basics }}
+        {{!--
 		{{> work }}
 		{{> volunteer }}
 		{{> education }}
@@ -25,5 +24,7 @@
 		{{> languages }}
 		{{> interests }}
 		{{> references }}
-	</body>
+		--}}
+    </article>
+</body>
 </html>
