@@ -14,6 +14,7 @@ body {
 	max-width: var(--max-page-width);
 	margin-left: auto;
 	margin-right: auto;
+	padding: 0 5px;
 }
 
 .resume-section {
@@ -24,6 +25,10 @@ body {
 	:root {
 		--max-page-width: 960px;
 	}
+
+	.resume {
+		padding: 0;
+	}
 }
 
 @media print {
@@ -33,5 +38,9 @@ body {
 
 	a:after {
 		content: " [" attr(href) "] ";
+	}
+
+	.resume {
+		padding: 0;
 	}
 }

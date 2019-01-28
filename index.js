@@ -3,7 +3,8 @@ const fs = require("fs"),
     Handlebars = require("handlebars");
 
 function render(resume) {
-    const css = fs.readFileSync(__dirname + "/style.css", "utf-8"),
+    const normalizeCss = fs.readFileSync(__dirname + "/normalize.css", "utf-8"),
+        css = fs.readFileSync(__dirname + "/style.css", "utf-8"),
         tpl = fs.readFileSync(__dirname + "/resume.hbs", "utf-8"),
         partialsDir = path.join(__dirname, 'partials'),
         filenames = fs.readdirSync(partialsDir);
@@ -20,6 +21,7 @@ function render(resume) {
         Handlebars.registerPartial(name, template);
     });
     return Handlebars.compile(tpl)({
+        normalizeCss,
         css,
         resume
     });
