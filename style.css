@@ -17,8 +17,29 @@ body {
 	padding: 0 5px;
 }
 
-.resume-section {
+.vertical-section {
 	flex: 1 100%;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.vertical-section > * {
+    margin-bottom: 0;
+}
+
+.vertical-element {
+    flex: 1 100%;
+    margin: 10px 0 0 0;
+}
+
+.horizontal-section {
+    flex: 1 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.horizontal-element {
+    flex: 1 1 0;
 }
 
 @media only screen and (min-width: 960px) {
