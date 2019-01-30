@@ -12,6 +12,10 @@ address {
 	font-style: normal;
 }
 
+h1, h2, h3 {
+    margin-bottom: 0;
+}
+
 a[href^="mailto"]::before {
 	content: "\1F4E7 ";
 }
@@ -35,20 +39,22 @@ a[href^="tel"]::before {
 	flex-flow: column nowrap;
 }
 
-.container.vertical > h1 {
-	margin-bottom: 0;
-}
-
 .container.vertical > * {
     flex: 1 100%;
 }
 
 .container.horizontal {
 	flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 .container.horizontal > * {
     flex: 1 1 0;
+    margin-right: 5px;
+}
+
+.element {
+    margin-top: 5px;
 }
 
 @media only screen and (min-width: 960px) {
@@ -69,4 +75,8 @@ a[href^="tel"]::before {
 	.resume {
 		padding: 0;
 	}
+
+    a[data-print="url"]:after {
+        content: " [" attr(href) "] ";
+    }
 }

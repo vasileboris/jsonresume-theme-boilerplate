@@ -4,7 +4,7 @@
         <h2>{{label}}</h2>
 
         {{#if summary}}
-            <article>
+            <article class="element">
                 {{summary}}
             </article>
         {{/if}}
@@ -15,17 +15,17 @@
                 <h3>Contact</h3>
 
                 {{#if website}}
-                    <div>
+                    <div class="element">
                         <a href="{{website}}">{{website}}</a>
                     </div>
                 {{/if}}
                 {{#if email}}
-                    <div>
+                    <div class="element">
                         <a href="mailto:{{email}}">{{email}}</a>
                     </div>
                 {{/if}}
                 {{#if phone}}
-                    <div>
+                    <div class="element">
                         <a href="tel:{{phone}}">{{phone}}</a>
                     </div>
                 {{/if}}
@@ -36,21 +36,23 @@
                 <address>
                     <h3>Location</h3>
 
-                    {{#if address}}
-                        <span>{{address}}</span>
-                    {{/if}}
-                    {{#if postalCode}}
-                        <span>{{postalCode}}</span>
-                    {{/if}}
-                    {{#if city}}
-                        <span>{{city}}</span>
-                    {{/if}}
-                    {{#if region}}
-                        <span>{{region}}</span>
-                    {{/if}}
-                    {{#if countryCode}}
-                        <span>{{countryCode}}</span>
-                    {{/if}}
+                    <div class="element">
+                        {{#if address}}
+                            <span>{{address}}</span>
+                        {{/if}}
+                        {{#if postalCode}}
+                            <span>{{postalCode}}</span>
+                        {{/if}}
+                        {{#if city}}
+                            <span>{{city}}</span>
+                        {{/if}}
+                        {{#if region}}
+                            <span>{{region}}</span>
+                        {{/if}}
+                        {{#if countryCode}}
+                            <span>{{countryCode}}</span>
+                        {{/if}}
+                    </div>
                 </address>
             {{/if}}
         {{/location}}
@@ -58,21 +60,19 @@
             <article>
                 <h3>Profiles</h3>
 
-                <section class="container horizontal">
+                <div class="container horizontal">
                     {{#each profiles}}
-                        <div>
-                            {{#if network}}
-                                <strong>{{network}}</strong>
-                            {{/if}}
-                            {{#if username}}
-                                <div>{{username}}</div>
-                            {{/if}}
-                            {{#if url}}
-                                <div><a href="{{url}}">Link</a></div>
-                            {{/if}}
-                        </div>
+                        {{#if url}}
+                            <div class="element">
+                                {{#if network}}
+                                    <div><a href="{{url}}" data-print="url">{{network}}</a></div>
+                                {{else}}
+                                    <div><a href="{{url}}" data-print="url">Link</a></div>
+                                {{/if}}
+                            </div>
+                        {{/if}}
                     {{/each}}
-                </section>
+                </div>
             </article>
         {{/if}}
     </section>
