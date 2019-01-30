@@ -8,37 +8,46 @@ body {
 	color: black;
 }
 
+address {
+	font-style: normal;
+}
+
+a[href^="mailto"]::before {
+	content: "\1F4E7 ";
+}
+
+a[href^="tel"]::before {
+	content: "\1F4DE ";
+}
+
 .resume {
-	display: flex;
-	flex-flow: column nowrap;
 	max-width: var(--max-page-width);
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0 5px;
 }
 
-.vertical-section {
-	flex: 1 100%;
+.container {
 	display: flex;
+}
+
+.container.vertical {
 	flex-flow: column nowrap;
 }
 
-.vertical-section > * {
-    margin-bottom: 0;
+.container.vertical > h1 {
+	margin-bottom: 0;
 }
 
-.vertical-element {
+.container.vertical > * {
     flex: 1 100%;
-    margin: 10px 0 0 0;
 }
 
-.horizontal-section {
-    flex: 1 100%;
-    display: flex;
-    flex-flow: row wrap;
+.container.horizontal {
+	flex-flow: row wrap;
 }
 
-.horizontal-element {
+.container.horizontal > * {
     flex: 1 1 0;
 }
 
@@ -55,10 +64,6 @@ body {
 @media print {
 	body {
 		font-family: Georgia, Times, "Times New Roman", serif;
-	}
-
-	a:after {
-		content: " [" attr(href) "] ";
 	}
 
 	.resume {

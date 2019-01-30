@@ -1,101 +1,79 @@
 {{#resume.basics}}
-    <section class="vertical-section">
+    <section class="container vertical">
         <h1>{{name}}</h1>
         <h2>{{label}}</h2>
 
         {{#if summary}}
-            <div class="vertical-element">
+            <article>
                 {{summary}}
-            </div>
+            </article>
         {{/if}}
     </section>
-	<section class="horizontal-section">
+    <section class="container horizontal">
         {{#if (or website email phone)}}
-            <article class="horizontal-element">
+            <address>
                 <h3>Contact</h3>
 
                 {{#if website}}
-                    <div class="website">
-                        <strong>Website</strong>
-                        {{website}}
+                    <div>
+                        <a href="{{website}}">{{website}}</a>
                     </div>
                 {{/if}}
                 {{#if email}}
-                    <div class="email">
-                        <strong>Email</strong>
-                        {{email}}
+                    <div>
+                        <a href="mailto:{{email}}">{{email}}</a>
                     </div>
                 {{/if}}
                 {{#if phone}}
-                    <div class="phone">
-                        <strong>Phone</strong>
-                        {{phone}}
+                    <div>
+                        <a href="tel:{{phone}}">{{phone}}</a>
                     </div>
                 {{/if}}
-            </article>
+            </address>
         {{/if}}
-		{{#location}}
+        {{#location}}
             {{#if (or address postalCode city countryCode region)}}
-                <article class="horizontal-element">
+                <address>
                     <h3>Location</h3>
 
                     {{#if address}}
-                    <div class="address">
-                        <strong>Address</strong>
-                        {{address}}
-                    </div>
+                        <span>{{address}}</span>
                     {{/if}}
                     {{#if postalCode}}
-                    <div class="postalCode">
-                        <strong>Postal code</strong>
-                        {{postalCode}}
-                    </div>
+                        <span>{{postalCode}}</span>
                     {{/if}}
                     {{#if city}}
-                    <div class="city">
-                        <strong>City</strong>
-                        {{city}}
-                    </div>
-                    {{/if}}
-                    {{#if countryCode}}
-                    <div class="countryCode">
-                        <strong>Country code</strong>
-                        {{countryCode}}
-                    </div>
+                        <span>{{city}}</span>
                     {{/if}}
                     {{#if region}}
-                    <div class="region">
-                        <strong>Region</strong>
-                        {{region}}
-                    </div>
+                        <span>{{region}}</span>
                     {{/if}}
-                </article>
+                    {{#if countryCode}}
+                        <span>{{countryCode}}</span>
+                    {{/if}}
+                </address>
             {{/if}}
-		{{/location}}
-		{{#if profiles.length}}
-            <article class="horizontal-element">
+        {{/location}}
+        {{#if profiles.length}}
+            <article>
                 <h3>Profiles</h3>
 
-                {{#each profiles}}
-                <div class="item">
-                    {{#if network}}
-                    <strong class="network">
-                        {{network}}
-                    </strong>
-                    {{/if}}
-                    {{#if username}}
-                    <div class="username">
-                        {{username}}
-                    </div>
-                    {{/if}}
-                    {{#if url}}
-                    <div class="url">
-                        <a href="{{url}}">Link</a>
-                    </div>
-                    {{/if}}
-                </div>
-                {{/each}}
+                <section class="container horizontal">
+                    {{#each profiles}}
+                        <div>
+                            {{#if network}}
+                                <strong>{{network}}</strong>
+                            {{/if}}
+                            {{#if username}}
+                                <div>{{username}}</div>
+                            {{/if}}
+                            {{#if url}}
+                                <div><a href="{{url}}">Link</a></div>
+                            {{/if}}
+                        </div>
+                    {{/each}}
+                </section>
             </article>
-		{{/if}}
-	</section>
+        {{/if}}
+    </section>
 {{/resume.basics}}
