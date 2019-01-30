@@ -4,22 +4,22 @@
 
     <div class="container horizontal">
         {{#each resume.skills}}
-            <article class="element">
-                {{#if name}}
-                <h3>{{name}}</h3>
-                {{/if}}
+        <article>
+            {{#if name}}
+            <h3>{{name}}</h3>
+            {{/if}}
 
-                {{#if level}}
-                <div>{{level}}</div>
-                {{/if}}
-                {{#if keywords.length}}
-                <ul>
-                    {{#each keywords}}
-                    <li>{{.}}</li>
-                    {{/each}}
-                </ul>
-                {{/if}}
-            </article>
+            {{#if level}}
+            <div class="element">{{level}}</div>
+            {{/if}}
+            {{#if keywords.length}}
+            <ul class="element">
+                {{#each keywords}}
+                <li>{{.}}</li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </article>
         {{/each}}
     </div>
 </section>
