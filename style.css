@@ -45,12 +45,16 @@ a[href^="tel"]::before {
 
 .container.horizontal {
 	flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .container.horizontal > * {
-    flex: 1 1 0;
-    margin-right: 5px;
+    flex: 1 1 content;
+    margin-right: 20px;
+}
+
+.container.horizontal.small > * {
+	margin-right: 5px;
 }
 
 .element {
