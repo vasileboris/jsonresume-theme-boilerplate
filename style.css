@@ -53,10 +53,6 @@ a[href^="tel"]::before {
     margin-right: 20px;
 }
 
-.container.horizontal.small > * {
-	margin-right: 5px;
-}
-
 .element {
     margin-top: 5px;
 }

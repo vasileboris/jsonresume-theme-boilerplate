@@ -60,19 +60,17 @@
     <article>
         <h3>Profiles</h3>
 
-        <div class="container horizontal small">
-            {{#each profiles}}
-                {{#if url}}
-                    <div class="element">
-                        {{#if network}}
-                            <div><a href="{{url}}" data-print="url">{{network}}</a></div>
-                        {{else}}
-                            <div><a href="{{url}}" data-print="url">Link</a></div>
-                        {{/if}}
-                    </div>
-                {{/if}}
-            {{/each}}
-        </div>
+        {{#each profiles}}
+            {{#if url}}
+                <div class="element">
+                    {{#if network}}
+                        <div><a href="{{url}}" data-print="url">{{network}}</a></div>
+                    {{else}}
+                        <div><a href="{{url}}" data-print="url">Link</a></div>
+                    {{/if}}
+                </div>
+            {{/if}}
+        {{/each}}
     </article>
     {{/if}}
 </section>
