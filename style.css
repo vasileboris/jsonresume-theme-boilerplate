@@ -61,6 +61,10 @@ a[href^="tel"]::before {
     margin-top: 5px;
 }
 
+.emphasis {
+	font-weight: bolder;
+}
+
 @media only screen and (min-width: 960px) {
 	:root {
 		--max-page-width: 960px;
@@ -78,6 +82,11 @@ a[href^="tel"]::before {
 
 	.resume {
 		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
 	}
 
     a[data-print="url"]:after {

@@ -9,10 +9,8 @@ function render(resume) {
         partialsDir = path.join(__dirname, 'partials'),
         filenames = fs.readdirSync(partialsDir);
 
-    Handlebars.registerHelper('and', and);
     Handlebars.registerHelper('or', or);
     Handlebars.registerHelper('buildPeriod', buildPeriod);
-    Handlebars.registerHelper('buildDate', buildDate);
 
     filenames.forEach(function (filename) {
         const matches = /^([^.]+).hbs$/.exec(filename);
@@ -32,11 +30,6 @@ function render(resume) {
     });
 }
 
-const and = (...params) => {
-    const length = params.length - 1;
-    return length > 0 ? params.slice(0, length).reduce((acc, p) => acc && p) : false;
-};
-
 const or = (...params) => {
     const length = params.length - 1;
     return length > 0 ? params.slice(0, length).reduce((acc, p) => acc || p) : false;
@@ -46,11 +39,6 @@ const buildPeriod = (context, startDateField, endDateField) => {
     const startDate = context[startDateField],
         endDate = context[endDateField];
     return formatPeriod(startDate, endDate);
-};
-
-const buildDate = (context, dateField) => {
-    const date = context[dateField];
-    return formatPeriod(date, date);
 };
 
 const formatPeriod = (startDate, endDate) => {
