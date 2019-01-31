@@ -3,6 +3,7 @@
 	<h2>Education</h2>
 
 	{{#each resume.education}}
+    <article>
         {{#if area}}
         <h3>{{area}}</h3>
         {{/if}}
@@ -34,6 +35,7 @@
             {{/each}}
         </ul>
         {{/if}}
+    </article>
 	{{/each}}
 </section>
 {{/if}}
