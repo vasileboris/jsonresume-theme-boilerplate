@@ -11,6 +11,7 @@ function render(resume) {
 
     Handlebars.registerHelper('or', or);
     Handlebars.registerHelper('buildPeriod', buildPeriod);
+    Handlebars.registerHelper('buildDate', buildDate);
 
     filenames.forEach(function (filename) {
         const matches = /^([^.]+).hbs$/.exec(filename);
@@ -39,6 +40,11 @@ const buildPeriod = (context, startDateField, endDateField) => {
     const startDate = context[startDateField],
         endDate = context[endDateField];
     return formatPeriod(startDate, endDate);
+};
+
+const buildDate = (context, dateField) => {
+    const date = context[dateField];
+    return formatPeriod(date, date);
 };
 
 const formatPeriod = (startDate, endDate) => {
