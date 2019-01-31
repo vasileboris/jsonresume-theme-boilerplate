@@ -1,21 +1,20 @@
 {{#if resume.interests.length}}
-<section id="interests">
+<section class="container horizontal">
 	<h2>Interests</h2>
+
 	{{#each resume.interests}}
-	<div class="item">
+	<article>
 		{{#if name}}
-		<div class="name">
-			{{name}}
-		</div>
+		<h3>{{name}}</h3>
 		{{/if}}
 		{{#if keywords.length}}
-		<ul class="keywords">
+		<ul class="element">
 			{{#each keywords}}
 			<li>{{.}}</li>
 			{{/each}}
 		</ul>
 		{{/if}}
-	</div>
+	</article>
 	{{/each}}
 </section>
 {{/if}}
