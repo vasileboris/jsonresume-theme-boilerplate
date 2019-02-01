@@ -24,6 +24,11 @@ a[href^="tel"]::before {
 	content: "\1F4DE ";
 }
 
+blockquote {
+	border-left: solid;
+	padding: 5px;
+}
+
 .resume {
 	max-width: var(--max-page-width);
 	margin-left: auto;

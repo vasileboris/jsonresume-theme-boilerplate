@@ -3,7 +3,7 @@
 	<h2>Volunteer</h2>
 
 	{{#each resume.volunteer}}
-	<div>
+	<article>
         {{#if position}}
         <h3>{{position}}</h3>
         {{/if}}
@@ -27,7 +27,7 @@
             {{/each}}
         </ul>
         {{/if}}
-	</div>
+	</article>
 	{{/each}}
 </section>
 {{/if}}
