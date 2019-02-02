@@ -66,6 +66,16 @@ blockquote {
 	font-weight: bolder;
 }
 
+.round {
+	border-radius: 50%;
+}
+
+.profile {
+	width: 128px;
+	height: 128px;
+	object-fit: cover;
+}
+
 @media only screen and (min-width: 960px) {
 	:root {
 		--max-page-width: 960px;
@@ -73,6 +83,11 @@ blockquote {
 
 	.resume {
 		padding: 0;
+	}
+
+	.profile {
+		width: 180px;
+		height: 180px;
 	}
 }
 
