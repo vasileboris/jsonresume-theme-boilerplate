@@ -90,7 +90,7 @@ blockquote {
 	}
 }
 
-@media only screen and (min-width: 960px) {
+@media (min-width: 960px) {
 	:root {
 		--max-page-width: 960px;
 	}
@@ -110,6 +110,10 @@ blockquote {
 }
 
 @media print {
+	@page {
+		margin: 1cm 1cm 2cm 1cm;
+	}
+
 	body {
 		font-family: Georgia, Times, "Times New Roman", serif;
 	}
