@@ -48,14 +48,21 @@ blockquote {
     flex: 1 100%;
 }
 
-.container.horizontal {
+.container.horizontal,
+.container.aside {
 	flex-flow: row wrap;
     justify-content: flex-start;
 }
 
-.container.horizontal > * {
+.container.horizontal > *,
+.container.aside > *{
     flex: 1 1 content;
     margin-right: 20px;
+}
+
+.resume > .container.horizontal > .content {
+	flex: 1 1 0px;
+	min-width: 480px
 }
 
 .element {
@@ -76,6 +83,13 @@ blockquote {
 	object-fit: cover;
 }
 
+@media only screen and (min-width: 480px) {
+	.profile {
+		width: 180px;
+		height: 180px;
+	}
+}
+
 @media only screen and (min-width: 960px) {
 	:root {
 		--max-page-width: 960px;
@@ -85,9 +99,13 @@ blockquote {
 		padding: 0;
 	}
 
-	.profile {
-		width: 180px;
-		height: 180px;
+	.container.aside {
+		flex-flow: column nowrap;
+	}
+
+	.container.aside > * {
+		flex: 1 100%;
+		margin-right: 0;
 	}
 }
 
