@@ -51,24 +51,17 @@ blockquote {
 }
 
 .container.vertical > * {
-    flex: 1 100%;
+    flex: 1 1 100%;
 }
 
-.container.horizontal,
-.container.aside {
+.container.horizontal {
 	flex-flow: row wrap;
     justify-content: flex-start;
 }
 
-.container.horizontal > *,
-.container.aside > *{
-    flex: 1 1 content;
+.container.horizontal > * {
+    flex: 1 1 0px;
     margin-right: 20px;
-}
-
-.resume > .container.horizontal > .content {
-	flex: 1 1 0px;
-	min-width: 480px
 }
 
 .element {
@@ -89,14 +82,6 @@ blockquote {
 	object-fit: cover;
 }
 
-.resume > header {
-    display: block;
-}
-
-.content > header {
-    display: none;
-}
-
 @media only screen and (min-width: 480px) {
 	.profile {
 		width: 180px;
@@ -111,28 +96,6 @@ blockquote {
 
 	.resume {
 		padding: 0;
-	}
-
-    .resume > header {
-        display: none;
-    }
-
-    .content {
-        padding-left: 20px;
-        border-left: solid #10bbd5;
-    }
-
-    .content > header {
-        display: block;
-    }
-
-	.container.aside {
-		flex-flow: column nowrap;
-	}
-
-	.container.aside > * {
-		flex: 1 1 100%;
-		margin-right: 0;
 	}
 }
 

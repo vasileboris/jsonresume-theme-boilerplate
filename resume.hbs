@@ -13,32 +13,19 @@
 	</style>
 </head>
 <body>
-	<div class="resume">
-        <header>
-            {{> basics-name }}
-        </header>
-        <div class="container horizontal">
-            <aside class="aside">
-                {{> basics-details }}
-            </aside>
-            <div class="content">
-                <header>
-                    {{> basics-name }}
-                </header>
-                <div class="container vertical">
-                    {{> basics-overview }}
-                    {{> skills }}
-                    {{> work }}
-                    {{> volunteer }}
-                    {{> education }}
-                    {{> awards }}
-                    {{> publications }}
-                    {{> languages }}
-                    {{> interests }}
-                    {{> references }}
-                </div>
-            </div>
-        </div>
+	<div class="resume container vertical">
+        {{> basics-name }}
+        {{> basics-details }}
+        {{> basics-overview }}
+        {{> skills }}
+        {{> work }}
+        {{> volunteer }}
+        {{> education }}
+        {{> awards }}
+        {{> publications }}
+        {{> languages }}
+        {{> interests }}
+        {{> references }}
     </div>
 </body>
 </html>
