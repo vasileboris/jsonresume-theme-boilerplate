@@ -83,6 +83,14 @@ blockquote {
 	object-fit: cover;
 }
 
+.resume > header {
+    display: block;
+}
+
+.content > header {
+    display: none;
+}
+
 @media only screen and (min-width: 480px) {
 	.profile {
 		width: 180px;
@@ -98,6 +106,14 @@ blockquote {
 	.resume {
 		padding: 0;
 	}
+
+    .resume > header {
+        display: none;
+    }
+
+    .content > header {
+        display: block;
+    }
 
 	.container.aside {
 		flex-flow: column nowrap;
