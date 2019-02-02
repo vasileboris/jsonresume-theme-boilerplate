@@ -16,6 +16,12 @@ h1, h2, h3, ul {
     margin-bottom: 0;
 }
 
+h1, h2 {
+    padding: 5px;
+    border-radius: 15px;
+    background-color: #10bbd5;
+}
+
 a[href^="mailto"]::before {
 	content: "\1F4E7 ";
 }
@@ -111,6 +117,11 @@ blockquote {
         display: none;
     }
 
+    .content {
+        padding-left: 20px;
+        border-left: solid #10bbd5;
+    }
+
     .content > header {
         display: block;
     }
@@ -120,7 +131,7 @@ blockquote {
 	}
 
 	.container.aside > * {
-		flex: 1 100%;
+		flex: 1 1 100%;
 		margin-right: 0;
 	}
 }
