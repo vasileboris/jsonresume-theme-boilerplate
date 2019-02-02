@@ -122,8 +122,4 @@ blockquote {
 		text-decoration: none;
 		color: inherit;
 	}
-
-    a[data-print="url"]:after {
-        content: " [" attr(href) "] ";
-    }
 }
